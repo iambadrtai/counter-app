@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", "DM Sans", sans-serif;
+  background-color: #f5f6f8;
+  background-image: radial-gradient(circle at 50% 15%, #ffffff 0%, #ebecee 100%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Card container */
+main.counter {
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 36px 28px;
+  border-radius: 26px;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.07), 0 2px 6px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Title */
+.counter h1 {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #0a0a0c;
+  margin: 0 0 24px 0;
+}
+
+/* Keeps the buttons and count aligned cleanly */
+.buttons {
+  display: contents;
+}
+
+/* Counter display stage */
+#countState {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f1f2f4;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  width: 100%;
+  min-height: 96px;
+  border-radius: 20px;
+  padding: 12px 20px;
+}
+
+/* Number display in center */
+#count {
+  order: 2;
+  color: #0a0a0c;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+}
+
+/* Buttons (+ and -) */
+#decrease,
+#increase {
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  background-color: #ffffff;
+  color: #0a0a0c;
+  font-family: inherit;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+  outline: none;
+}
+
+#decrease {
+  order: 1; /* Places the minus button on the left */
+}
+
+#increase {
+  order: 3; /* Places the plus button on the right */
+}
+
+/* Hover & Active Interactions */
+#decrease:hover,
+#increase:hover {
+  background-color: #0a0a0c;
+  color: #ffffff;
+  border-color: #0a0a0c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px -4px rgba(0, 0, 0, 0.25);
+}
+
+#decrease:active,
+#increase:active {
+  transform: translateY(0) scale(0.92);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+#decrease:focus-visible,
+#increase:focus-visible {
+  outline: 2px solid #0a0a0c;
+  outline-offset: 2px;
+}
